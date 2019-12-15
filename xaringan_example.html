@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Animating Expected Possession Value  in the NBA</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Howard Baek      University of Washington" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Animating Expected Possession Value<br /> in the NBA
+## with gganimate
+### Howard Baek<br /> <br /> <br /> University of Washington
+
+---
+
+
+
+
+class: center
+
+# Stumblng into data-driven curiosity
+
+.center[![](img/pointwise-abstract.png)]
+
+---
+class: center
+
+# Thankfully, the authors shared R code
+
+.center[![](img/github-code.png)]
+
+---
+class: center
+
+# Thankfully, the authors shared R code
+
+.center[![](img/github-code-edited.png)]
+
+---
+
+class: inverse
+
+# NBA Optical Tracking System: STATS SportVU
+
+.pull-left[
+
+- Tracks 2-D locations of every player on court (x-y coordinates) as well as 3-D coordinates of ball (x,y,z coordinates).
+
+
+- 25 times a second 
+
+
+- 72,000 times a game
+
+
+- 1 billion times a season.
+
+]
+
+.pull-right[
+
+&lt;img src="img/sportvu-demo.gif" width="580px" height="300px" /&gt;
+
+
+]
+
+---
+
+# Expected Possession Value (EPV)
+
+--
+
+- **Multi-resolution model**
+
+--
+
+- Macrotransition &amp; Microtransition models are **combined** to account for discrete and continuous nature of the sport
+
+--
+
+- _Macrotransition_: passes, shots, turnovers. 
+
+--
+
+
+- _Microtransition_: every other movement that players make with ball.   
+
+--
+
+&lt;br&gt;
+
+&lt;img src="img/epv-equation.png" width="1971" /&gt;
+
+
+
+---
+
+# Static image that could be animated!
+
+.center[![](img/static-image.png)]
+
+---
+
+# Static image that is now gg-animated!
+
+
+.center[![](img/anim-231.GIF)]
+
+
+---
+
+# Let's dig into the code
+
+
+&lt;img src="img/adventure.gif" width="380px" height="300px" /&gt;
+
+---
+
+# Future Work
+
+
+.pull-left[
+
+
+&lt;img src="img/shiny-app.png" width="270px" height="300px" /&gt;
+
+]
+
+
+.pull-right[
+
+- Improve usability by allowing for _interactivity_
+
+- Real-time rendering of animation(?)
+
+- **Your** Suggestions?
+
+]
+
+---
+
+
+# Resources
+
+- [GitHub Repo](https://github.com/dcervone/EPVDemo)
+
+- [Paper + Video of Presentation](http://www.sloansportsconference.com/content/pointwise-predicting-points-and-valuing-decisions-in-real-time-with-nba-optical-tracking-data/)
+
+- [Preliminary Talk by Author](https://www.youtube.com/watch?v=2fYa7M_H3S4)
+
+- [Theoretical Paper](https://arxiv.org/pdf/1408.0777.pdf)
+
+- [Presentation of Grammar of Animation](https://www.youtube.com/watch?v=21ZWDrTukEs)
+
+- [Intro to gganimate](https://www.youtube.com/watch?v=3UY7Or0v_dI)
+
+
+
+---
+
+# Thank You!
+
+&lt;a href="https://twitter.com/howard_baek"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @howard_baek&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://github.com/howardbaek"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @howardbaek&lt;/a&gt;&lt;br&gt;
+
+#### Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

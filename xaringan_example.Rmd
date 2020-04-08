@@ -102,13 +102,13 @@ Predicting Basketball Possession Outcomes"](https://arxiv.org/pdf/1408.0777.pdf)
 
 ---
 
-# Static image that could be animated!
+# Static and Uninteresting
 
 .center[![](img/static-image.png)]
 
 ---
 
-# Static image that is now gg-animated!
+# Animated and Attention-Grabbing!!!
 
 
 .center[![](img/anim-231.GIF)]

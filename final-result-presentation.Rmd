@@ -17,7 +17,7 @@ library(tidyverse) # Data Manipulation
 library(gganimate) # Animations
 library(rvest) # Web Scraping
 library(magick) # Image processing
-library(ggrepel) # Texts in Graph
+library(ggrepel) # Texts in Graph # WHAT DID I USE THIS FOR?
 theme_set(theme_minimal()) # Adjust theme of graphs
 # Load Source Code: epv-demo-code.R (Takes 5 minutes)
 ```
@@ -173,6 +173,7 @@ fullcourt() +
   geom_point(data = first_poss, aes(x = h3_x, y = h3_y, group = possID), size=3, color = "yellow") +  
   geom_point(data = first_poss, aes(x = h4_x, y = h4_y, group = possID), size=3, color = "orange") +  
   geom_point(data = first_poss, aes(x = h5_x, y = h5_y, group = possID), size=3, color = "green") +  
+  
   geom_point(data = first_poss, aes(x = a1_x, y = a1_y, group = possID), size=3, color = "salmon1") +  
   geom_point(data = first_poss, aes(x = a2_x, y = a2_y, group = possID), size=3, color = "lightskyblue1") +  
   geom_point(data = first_poss, aes(x = a3_x, y = a3_y, group = possID), size=3, color = "yellow") +  
@@ -464,7 +465,8 @@ epv_curve <- e.dat %>%
 epv_curve_2_anim <- epv_curve %>% 
   ggplot(aes(x = 720 - game_clock, y = epv.smooth)) +
   geom_path() +
-  transition_reveal(720 - game_clock) +
+  ## Here comes the gganimate code ## 
+  transition_reveal(720 - game_clock) + ## Reminder to read up on transition_reveal
   labs(x = "Time (Seconds)",
        y = "EPV",
        title = "Possession #2 EPV") 
@@ -687,11 +689,3 @@ image_write(pbp_epv_gif, paste0("./anim-", 231, ".GIF"))
   
 }
 ```
-
-
-
-
-# Play-by-Play with EPV 
- 
-https://youtu.be/6eYWIpqD-io?t=10
- 

@@ -3,7 +3,8 @@
   <head>
     <title>Animating Expected Possession Value  in the NBA</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Howard Baek      University of Washington" />
+    <meta name="author" content="Howard Baek" />
+    <meta name="date" content="2020-04-08" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/5235085b15.js"></script>
@@ -14,16 +15,37 @@ class: center, middle, inverse, title-slide
 
 # Animating Expected Possession Value<br /> in the NBA
 ## with gganimate
-### Howard Baek<br /> <br /> <br /> University of Washington
+### Howard Baek
+### 2020-04-08
 
 ---
 
 
 
 
+
+# Agenda
+
+- Introduction to Expected Possession Value (EPV)
+
+--
+
+
+- Introduction to gganimate
+
+--
+
+- R Code behind the animations
+
+--
+
+- Resources
+
+---
+
 class: center
 
-# Stumblng into data-driven curiosity
+# Stumbling into data-driven curiosity
 
 .center[![](img/pointwise-abstract.png)]
 
@@ -35,39 +57,13 @@ class: center
 .center[![](img/github-code.png)]
 
 ---
-class: center
 
-# Thankfully, the authors shared R code
-
-.center[![](img/github-code-edited.png)]
-
----
-
-class: inverse
+class: center,inverse
 
 # NBA Optical Tracking System: STATS SportVU
 
-.pull-left[
-
-- Tracks 2-D locations of every player on court (x-y coordinates) as well as 3-D coordinates of ball (x,y,z coordinates).
-
-
-- 25 times a second 
-
-
-- 72,000 times a game
-
-
-- 1 billion times a season.
-
-]
-
-.pull-right[
 
 &lt;img src="img/sportvu-demo.gif" width="580px" height="300px" /&gt;
-
-
-]
 
 ---
 
@@ -97,6 +93,13 @@ class: inverse
 &lt;img src="img/epv-equation.png" width="1971" /&gt;
 
 
+--
+
+&lt;br&gt;
+
+- Learn more: ["A Multiresolution Stochastic Process Model for
+Predicting Basketball Possession Outcomes"](https://arxiv.org/pdf/1408.0777.pdf)
+
 
 ---
 
@@ -114,59 +117,46 @@ class: inverse
 
 ---
 
-# Let's dig into the code
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 
-
-&lt;img src="img/adventure.gif" width="380px" height="300px" /&gt;
-
----
-
-# Future Work
-
-
-.pull-left[
-
-
-&lt;img src="img/shiny-app.png" width="270px" height="300px" /&gt;
-
-]
-
-
-.pull-right[
-
-- Improve usability by allowing for _interactivity_
-
-- Real-time rendering of animation(?)
-
-- **Your** Suggestions?
-
-]
+.center[![](img/rstudio.png)]
 
 ---
 
 
 # Resources
 
-- [GitHub Repo](https://github.com/dcervone/EPVDemo)
+- [Original R Code](https://github.com/dcervone/EPVDemo)
 
-- [Paper + Video of Presentation](http://www.sloansportsconference.com/content/pointwise-predicting-points-and-valuing-decisions-in-real-time-with-nba-optical-tracking-data/)
+- [POINTWISE](http://www.sloansportsconference.com/content/pointwise-predicting-points-and-valuing-decisions-in-real-time-with-nba-optical-tracking-data/)
 
 - [Preliminary Talk by Author](https://www.youtube.com/watch?v=2fYa7M_H3S4)
 
-- [Theoretical Paper](https://arxiv.org/pdf/1408.0777.pdf)
+- [Theory Paper](https://arxiv.org/pdf/1408.0777.pdf)
 
 - [Presentation of Grammar of Animation](https://www.youtube.com/watch?v=21ZWDrTukEs)
-
-- [Intro to gganimate](https://www.youtube.com/watch?v=3UY7Or0v_dI)
-
 
 
 ---
 
-# Thank You!
+class:center
+
+# Thank You
+
+
+&lt;img src="img/thank-you-2.gif" width="280px" height="300px" /&gt;
+
+
 
 &lt;a href="https://twitter.com/howard_baek"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @howard_baek&lt;/a&gt;&lt;br&gt;
 &lt;a href="https://github.com/howardbaek"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @howardbaek&lt;/a&gt;&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
 
 #### Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
     </textarea>

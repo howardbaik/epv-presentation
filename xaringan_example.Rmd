@@ -116,6 +116,36 @@ Predicting Basketball Possession Outcomes"](https://arxiv.org/pdf/1408.0777.pdf)
 
 ---
 
+
+# gganimate
+
+
+.pull-left[
+
+<br>
+
+- Extends `ggplot2` with a grammar of animations
+
+
+- `transition_*()` : defines how a layers should be interpreted in animation
+
+- Secondary Functions: `view_*()`, `shadow_*()`, `enter_*()`/`exit_*()`,`ease_aes()`
+
+
+]
+
+.pull-right[
+
+```{r, out.width = "280px", out.height = "300px", echo = FALSE}
+knitr::include_graphics("img/gganimate_logo.png")
+```
+
+
+]
+
+
+---
+
 <br>
 <br>
 <br>

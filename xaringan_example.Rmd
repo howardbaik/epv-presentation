@@ -180,10 +180,10 @@ class:center
 knitr::include_graphics("img/thank-you-2.gif")
 ```
 
+#### Contact: howardba@uw.edu
 
-
-<a href="https://twitter.com/howard_baek"><i class="fa fa-twitter fa-fw"></i>&nbsp; @howard_baek</a><br>
-<a href="https://github.com/howardbaek"><i class="fa fa-github fa-fw"></i>&nbsp; @howardbaek</a><br>
+<a href="https://twitter.com/howard_baek"><i class="fa fa-twitter fa-fw"></i>&nbsp; Twitter</a><br>
+<a href="https://github.com/howardbaek"><i class="fa fa-github fa-fw"></i>&nbsp; GitHub</a><br>
 
 <br>
 

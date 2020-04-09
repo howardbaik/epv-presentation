@@ -17,7 +17,7 @@ library(tidyverse) # Data Manipulation
 library(gganimate) # Animations
 library(rvest) # Web Scraping
 library(magick) # Image processing
-library(ggrepel) # Texts in Graph # WHAT DID I USE THIS FOR?
+library(ggrepel) # Texts in Graph 
 theme_set(theme_minimal()) # Adjust theme of graphs
 # Load Source Code: epv-demo-code.R (Takes 5 minutes)
 ```
@@ -466,7 +466,7 @@ epv_curve_2_anim <- epv_curve %>%
   ggplot(aes(x = 720 - game_clock, y = epv.smooth)) +
   geom_path() +
   ## Here comes the gganimate code ## 
-  transition_reveal(720 - game_clock) + ## Reminder to read up on transition_reveal
+  transition_reveal(720 - game_clock) + 
   labs(x = "Time (Seconds)",
        y = "EPV",
        title = "Possession #2 EPV") 
